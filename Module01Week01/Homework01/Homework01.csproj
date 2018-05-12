@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F181A63-B5AD-436D-9FCC-C3FB19C6807B}</ProjectGuid>
+    <ProjectGuid>{FCE8996D-D561-4048-BB2B-F07207AD3EEF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Homeork01</RootNamespace>
-    <AssemblyName>Homeork01</AssemblyName>
+    <RootNamespace>Homework01</RootNamespace>
+    <AssemblyName>Homework01</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
