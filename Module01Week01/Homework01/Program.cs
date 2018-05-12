@@ -14,8 +14,7 @@ namespace Homework01
             Random rndm = new Random();
             int number = rndm.Next(0, 100);
             int nr = 0;
-
-
+            
             Console.WriteLine("Please insert a number bweteen 0 and 100");
             do
             {
@@ -37,12 +36,6 @@ namespace Homework01
                     Console.WriteLine("The right number is lower");
                 }
             } while (nr != number);
-
-
-
-
-
-
         }
     }
 }
