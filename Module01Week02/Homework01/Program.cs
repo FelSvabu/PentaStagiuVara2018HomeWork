@@ -26,8 +26,8 @@ namespace Homework01
             DateTime birthDateTime = DateTime.Parse(insertBirthDay);
 
             TimeSpan diffe = now - birthDateTime;
-            double calcul = (int) diffe.TotalDays / 365;
-         
+            double calcul = (int)diffe.TotalDays / 365;
+
             Console.WriteLine("Insert your Gender (M/F): ");
             int? genderUser;
             string stringGender = Console.ReadLine().ToUpper();
@@ -35,35 +35,98 @@ namespace Homework01
             switch (stringGender)
             {
                 case "F":
-                    genderUser = (int?) Gender.Female;
+                    genderUser = (int?)Gender.Female;
                     break;
                 case "M":
-                    genderUser = (int?) Gender.Male;
+                    genderUser = (int?)Gender.Male;
                     break;
                 default:
                     genderUser = null;
                     break;
             }
 
-            if (genderUser == (int) Gender.Male && calcul < 65)
+            if (genderUser == (int)Gender.Male && calcul < 65)
             {
                 Console.WriteLine($"You have {65 - calcul} years until retirement");
             }
-            else if (genderUser == (int) Gender.Male && calcul >= 65)
+            else if (genderUser == (int)Gender.Male && calcul >= 65)
             {
                 Console.WriteLine($"You are retired");
             }
-            else if (genderUser == (int) Gender.Female && calcul < 63)
+            else if (genderUser == (int)Gender.Female && calcul < 63)
             {
                 Console.WriteLine($"You have {63 - calcul} years until retirement");
             }
-            else if (genderUser == (int) Gender.Male && calcul >= 63)
+            else if (genderUser == (int)Gender.Male && calcul >= 63)
             {
                 Console.WriteLine($"You are retired");
             }
             else
             {
                 Console.WriteLine("Error");
+            }
+
+
+            //Varianta 2
+
+            Console.WriteLine("\n \nVarianta 2");
+            Console.WriteLine("Please, insert your age");
+
+            Console.Write("year: ");
+            string stringYear = Console.ReadLine();
+            int year = int.Parse(stringYear);
+
+            Console.Write("month: ");
+            string stringMonth = Console.ReadLine();
+            int month = int.Parse(stringMonth);
+
+            Console.Write("day: ");
+            string stringDay = Console.ReadLine();
+            int day = int.Parse(stringDay);
+
+            DateTime DateOfBirth = new DateTime(year, month, day);
+            
+            TimeSpan diff = now - DateOfBirth;
+            int Age = (int) diff.TotalDays / 365;
+
+
+            Console.WriteLine("Insert your Gender (M/F): ");
+            int? gender;
+            string stringGenderUser = Console.ReadLine().ToUpper();
+            
+            switch (stringGenderUser)
+            {
+                case "F":
+                    gender = (int?) Gender.Female;
+                    break;
+                case "M":
+                    gender = (int?) Gender.Male;
+                    break;
+                default:
+                    gender = null;
+                    break;
+            }
+
+            if (gender == (int) Gender.Male && Age < 65)
+            {
+                Console.WriteLine($"You have {65 - Age} years until retirement");
+            }
+            else if (genderUser == (int) Gender.Male && Age >= 65)
+            {
+                Console.WriteLine("You are retired");
+            }
+            else if (gender == (int) Gender.Female && Age < 63)
+            {
+                Console.WriteLine($"You have {63 - Age} years until retirement");
+            }
+            else if (gender == (int) Gender.Male && Age >= 63)
+            {
+                Console.WriteLine($"You are retired");
+            }
+            else
+            {
+                Console.WriteLine("Error");
+                
             }
         }
     }
