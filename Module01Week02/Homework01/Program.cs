@@ -23,7 +23,7 @@ namespace Homework01
 
             Console.WriteLine("Insert your birth day. Format: MM dd YYYY");
             string insertBirthDay = Console.ReadLine();
-            DateTime birthDateTime = DateTime.Parse(insertBirthDay);
+            DateTime birthDateTime = DateTime.ParseExact(insertBirthDay, "MM/dd/yyy", null);
 
             TimeSpan diffe = now - birthDateTime;
             double calcul = (int)diffe.TotalDays / 365;
